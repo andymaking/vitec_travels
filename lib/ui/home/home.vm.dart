@@ -38,9 +38,9 @@ class HomeViewModel extends BaseViewModel{
     try{
       final response = await repository.getTravelData();
       response!=null || response!="null"? storageService.storeItem(key: DbTable.TRAVELS, value: response):(){};
-      await storageService.readItem(key: DbTable.TRAVELS);
+      var results = await storageService.readItem(key: DbTable.TRAVELS);
+      results==null?(){}:getFromStore();
       stopLoader();
-      getFromStore();
       return response;
     }catch(error){
       stopLoader();
