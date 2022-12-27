@@ -138,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           width: 80,
                                           decoration: BoxDecoration(
                                               image: DecorationImage(fit: BoxFit.fill,
-                                                  image: CachedNetworkImageProvider(nearby?.images==null?"":"${nearby?.images?[0].path}")
+                                                  image: CachedNetworkImageProvider(nearby?.images==null?"https://picsum.photos/200/300":"${nearby?.images?[0].path}")
                                               )
                                           ),
                                         ),
