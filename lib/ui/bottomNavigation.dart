@@ -236,7 +236,7 @@ class _NavigationBarItem extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(margin: const EdgeInsets.symmetric(horizontal: 15),height: 1.5, color: isSelected? Colors.grey: Colors.transparent,),
+              Container(margin: const EdgeInsets.symmetric(horizontal: 15),height: 1.5, color: isSelected? Colors.green: Colors.transparent,),
               Container(
                 height: 78.5,
                 child: Column(
@@ -248,9 +248,9 @@ class _NavigationBarItem extends StatelessWidget {
                         alignment: Alignment.center,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: isSelected? Colors.grey.withOpacity(0.05): Colors.transparent,
+                          color: isSelected? Colors.green.withOpacity(0.05): Colors.transparent,
                         ),
-                        child: Image.asset(icon, height: 35, color: isSelected? Colors.black:Colors.grey,)
+                        child: Image.asset(icon, height: 35, color: isSelected? Colors.green:Colors.grey,)
                     ),
                     const SizedBox(height: 5,),
                     Text(label, style: TextStyle(fontSize: 10,fontFamily: 'Inter', color: isSelected? Colors.black:Colors.grey, fontWeight: FontWeight.w500),)

@@ -27,7 +27,7 @@ void main() {
 
   setupLocator();
   Config.appFlavor = Flavor.DEVELOPMENT;
-  runApp(ProviderScope(child: MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
