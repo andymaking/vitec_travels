@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         SizedBox(height: 16,),
                         Container(
-                          height: model.viewMore==false?120:(120.toDouble()*model.nearby!.length.toDouble()) as double,
+                          height: model.viewMore==false?120:model.nearby?.length==null?120:(120.toDouble()*model.nearby!.length.toDouble()) as double,
                           child: model.nearby?.length==0||model.nearby?.length==null?
                           Center(
                             child: Text('No tours yet refresh page', style: TextStyle(fontSize: 17,fontFamily: 'Inter', color: Colors.black,fontWeight: FontWeight.w500),),
@@ -296,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         SizedBox(height: 16,),
                         Container(
-                          height: model.popViewMore==false?240:(120.toDouble()*model.populars!.length.toDouble()) as double,
+                          height: model.popViewMore==false?240:model.populars?.length==null?240:(120.toDouble()*model.populars!.length.toDouble()) as double,
                           child: model.populars?.length==0||model.populars?.length==null?
                           Center(
                             child: Text('No tours yet refresh page', style: TextStyle(fontSize: 17,fontFamily: 'Inter', color: Colors.black,fontWeight: FontWeight.w500),),
